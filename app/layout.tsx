@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -7,14 +7,15 @@ const playfair = Playfair_Display({
   variable: "--font-serif",
 });
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "RedOrchid | Luxury Beauty Parlour & Spa",
-  description: "Experience the ultimate beauty and relaxation at RedOrchid. Premium hair, skin, and bridal services tailored for you.",
+  title: "RedOrchid | Beauty Parlour & Hair Salon",
+  description: "Experience the ultimate beauty makeover at RedOrchid. Best hair, skin, and bridal services in town.",
 };
 
 export default function RootLayout({
@@ -23,11 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${poppins.variable}`}>
       <body className="antialiased">
         {children}
       </body>
     </html>
   );
 }
+
+
 
