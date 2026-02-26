@@ -172,7 +172,7 @@ export default function Home() {
           </div>
           <div className="relative h-[300px] md:h-[500px] border-[10px] md:border-[15px] border-white shadow-2xl rounded-sm overflow-hidden order-1 lg:order-2">
             <Image
-              src="/images/bride.jpg"
+              src="/images/bridal makeup.png"
               alt="Bridal"
               fill
               className="object-cover"
