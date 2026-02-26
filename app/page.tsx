@@ -17,22 +17,22 @@ export default function Home() {
   const services = [
     {
       title: "Hair Cuts & Styling",
-      price: "from $25",
+      price: "from Rs 1000",
       image: "/images/haircut and styling.png",
     },
     {
       title: "Facial & Skincare",
-      price: "from $40",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
+      price: "from Rs 2000",
+      image: "/images/skincare.png",
     },
     {
       title: "Bridal Makeup",
-      price: "from $120",
+      price: "from Rs 5000",
       image: "/images/bridal makeup.png",
     },
     {
       title: "Manicure & Pedicure",
-      price: "from $30",
+      price: "from Rs 2500",
       image: "/images/pedicure.png",
     },
   ];
@@ -44,7 +44,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-xs font-medium uppercase tracking-widest">
           <div className="flex gap-6">
             <span>Call Us: +1 (555) 123-4567</span>
-            <span>Mon-Sat: 9:00am - 8:00pm</span>
+            <span>Mon-Sun: 9:00 AM - 8:00</span>
           </div>
           <div className="flex gap-4">
             <a href="#" className="hover:text-primary transition-colors">Instagram</a>
