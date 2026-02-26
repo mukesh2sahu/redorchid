@@ -218,8 +218,8 @@ export default function Home() {
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-8">Working Hours</h4>
             <ul className="space-y-4 text-sm text-muted">
-              <li className="flex justify-between"><span>Mon - Sat</span> <span>9:00 - 20:00</span></li>
-              <li className="flex justify-between"><span>Sunday</span> <span className="text-primary font-bold">10:00 - 15:00</span></li>
+              <li className="flex justify-between"><span>Mon - Sat</span> <span>9:00 AM- 9:00 PM</span></li>
+              <li className="flex justify-between"><span>Sunday</span> <span className="text-primary font-bold">8:00 AM- 9:00 PM</span></li>
             </ul>
           </div>
         </div>
