@@ -18,22 +18,22 @@ export default function Home() {
     {
       title: "Hair Cuts & Styling",
       price: "from $25",
-      image: "https://images.unsplash.com/photo-1560869713-7d0a294308b3?q=80&w=600",
+      image: "/images/haircut and styling.png",
     },
     {
       title: "Facial & Skincare",
       price: "from $40",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600",
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Bridal Makeup",
       price: "from $120",
-      image: "https://images.unsplash.com/photo-1481931098730-1198397163ef?q=80&w=600",
+      image: "/images/bridal makeup.png",
     },
     {
       title: "Manicure & Pedicure",
       price: "from $30",
-      image: "https://images.unsplash.com/photo-1604654894610-df49ff6697ad?q=80&w=600",
+      image: "/images/pedicure.png",
     },
   ];
 
@@ -67,7 +67,6 @@ export default function Home() {
           <div className="hidden lg:flex gap-10 items-center text-sm font-bold uppercase tracking-wider">
             <a href="#" className="nav-link">Home</a>
             <a href="#services" className="nav-link">Services</a>
-            <a href="#prices" className="nav-link">Price List</a>
             <a href="#about" className="nav-link">About</a>
             <a href="#contact" className="btn-parlour">Book Appointment</a>
           </div>
@@ -83,7 +82,7 @@ export default function Home() {
       <section className="relative h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2000"
+            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2000&auto=format&fit=crop"
             alt="Beauty Parlour"
             fill
             className="object-cover"
@@ -104,7 +103,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#services" className="btn-parlour text-lg px-8 py-4">Explore Services</a>
-              <a href="#contact" className="btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">Our Gallery</a>
+              <a href="#about" className="btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">Our Story</a>
             </div>
           </div>
         </div>
@@ -122,7 +121,13 @@ export default function Home() {
             {services.map((service, index) => (
               <div key={index} className="parlour-card group">
                 <div className="relative h-64 overflow-hidden">
-                  <Image src={service.image} alt={service.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold mb-2 uppercase tracking-wide">{service.title}</h3>
@@ -146,7 +151,12 @@ export default function Home() {
             <button className="btn-parlour">Claim Your Offer</button>
           </div>
           <div className="relative h-[500px] border-[15px] border-white shadow-2xl rounded-sm overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=800" alt="Bridal" fill className="object-cover" />
+            <Image
+              src="https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=800&auto=format&fit=crop"
+              alt="Bridal"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -199,10 +209,10 @@ export default function Home() {
           <div>
             <h4 className="font-bold uppercase tracking-widest text-sm mb-8">Quick Links</h4>
             <ul className="space-y-4 text-sm text-muted">
-              <li><a href="#" className="hover:text-primary">Our Services</a></li>
+              <li><a href="#services" className="hover:text-primary">Our Services</a></li>
               <li><a href="#" className="hover:text-primary">Price List</a></li>
-              <li><a href="#" className="hover:text-primary">About Us</a></li>
-              <li><a href="#" className="hover:text-primary">Contact</a></li>
+              <li><a href="#about" className="hover:text-primary">About Us</a></li>
+              <li><a href="#contact" className="hover:text-primary">Contact</a></li>
             </ul>
           </div>
           <div>
@@ -214,7 +224,7 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto pt-20 border-t border-border mt-16 text-center text-xs font-bold uppercase tracking-[0.3em] text-muted/50">
-          &copy; 2024 RedOrchid Beauty Parlour. All rights reserved.
+          &copy; {new Date().getFullYear()} RedOrchid Beauty Parlour. All rights reserved.
         </div>
       </footer>
     </div>

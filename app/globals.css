@@ -42,6 +42,7 @@ h4 {
 .text-gradient {
   background: linear-gradient(to right, var(--primary), #9c27b0);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
